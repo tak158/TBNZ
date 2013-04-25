@@ -18,7 +18,7 @@ class JoinsControllerTest < ActionController::TestCase
 
   test "should create join" do
     assert_difference('Join.count') do
-      post :create, join: { event_id_id: @join.event_id_id, user_id_id: @join.user_id_id }
+      post :create, join: { event_id: @join.event_id, user_id: @join.user_id }
     end
 
     assert_redirected_to join_path(assigns(:join))
@@ -35,7 +35,7 @@ class JoinsControllerTest < ActionController::TestCase
   end
 
   test "should update join" do
-    patch :update, id: @join, join: { event_id_id: @join.event_id_id, user_id_id: @join.user_id_id }
+    patch :update, id: @join, join: { event_id: @join.event_id, user_id: @join.user_id }
     assert_redirected_to join_path(assigns(:join))
   end
 

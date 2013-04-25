@@ -14,8 +14,8 @@
   <tbody>
     <% @joins.each do |join| %>
     <tr>
-      <td><%= join.user_id %></td>
-      <td><%= join.event_id %></td>
+      <td><%= join.user %></td>
+      <td><%= join.event %></td>
       <td><%= link_to 'Show', join %></td>
       <td><%= link_to 'Edit', edit_join_path(join) %></td>
       <td><%= link_to 'Destroy', join, method: :delete, data: { confirm: 'Are you sure?' } %></td>
