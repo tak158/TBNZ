@@ -1,0 +1,14 @@
+<h1>Logins#new</h1>
+
+<%= form_for(@user, url: logins_path) do |f| %>
+<div class="field">
+  <%= f.label :user %>
+  <%= f.text_field :user %>
+</div>
+<div class="field">
+  <%= f.label :label %>
+  <%= f.text_field :password %>
+</div>
+<% end %>
+
+<p>Find me in app/views/logins/new.html.erb</p>

@@ -1,0 +1,14 @@
+class CreateEvents < ActiveRecord::Migration
+  def change
+    create_table :events do |t|
+      t.stirng :title
+      t.string :place
+      t.string :url
+      t.text :detail
+      t.datetime :date
+      t.integer :fixed_number
+
+      t.timestamps
+    end
+  end
+end
