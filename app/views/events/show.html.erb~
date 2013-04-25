@@ -30,6 +30,10 @@
   <%= @event.fixed_number %>
 </p>
 
+<p>
+  <%= link_to "このイベントに参加する", new_event_join_path(@event) %>
+</p>
+
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
