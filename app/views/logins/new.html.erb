@@ -1,15 +1,24 @@
-<h1>Logins</h1>
+<BR>
+<BR>
 
+<h1>イベント作成ツールUTNDです。ログインしてね。</h1>
+<BR><BR>
 <%= form_for(@user, url: logins_path) do |f| %>
-<div class="field">                                                                                                                                         
+<div id="page">
+<div class="field">                                                                                                       
+  <h3>
   <%= f.label :email %>                                                                                                                                     
   <%= f.text_field :email %>                                                                                                                                
+  </h3>
 </div>                                                                                                                                                      
 <div class="field">
+  <h3>
   <%= f.label :password %>
   <%= f.text_field :password %>
+  </h3>
 </div>
-<%= f.submit %>
+</div>
+<%= f.submit "ログイン"%>
 <% end %>
 
 

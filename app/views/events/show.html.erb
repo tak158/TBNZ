@@ -1,46 +1,55 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <h1>
-  <%= @event.title %>
-  </h1>
-</p>
-<hr>
-<p>
-  <strong>Place:</strong>
-  <%= @event.place  %>
-</p>
+<table>
+  <tr>
+    <p>
+      <h1>
+        <%= @event.title %>
+      </h1>
+    </p>
+    <hr>
 
-<p>
-  <strong>Url:</strong>
-  <%= @event.url %>
-</p>
-<hr>
+    <div id="page">
+      <p>
+        <strong>Place:</strong>
+        <%= @event.place  %>
+      </p>
 
-<p>
-  <strong>Detail:</strong>
-  <%= @event.detail %>
-</p>
+      <p>
+        <strong>Url:</strong>
+        <%= @event.url %>
+      </p>
+      <hr>
 
-<p>
-  <strong>Date:</strong>
-  <%= @event.date %>
-</p>
+      <p>
+        <strong>Detail:</strong>
+        <%= @event.detail %>
+      </p>
 
-<p>
-  <strong>Fixed number:</strong>
-  <%= @event.fixed_number %>
-</p>
+      <p>
+        <strong>Date:</strong>
+        <%= @event.date %>
+      </p>
 
-<p>
+      <p>
+        <strong>Fixed number:</strong>
+        <%= @event.fixed_number %>
+      </p>
+  </tr>
+  <tr>
+    <%= render 'joiner' %>
+  </tr>
+</table>
+</div>
+
+<BR><BR>
+
+<h2>
   <%= link_to "このイベントに参加する", new_event_join_path(@event) %>
-</p>
+</h2>
 
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
-<br />
-
-<%= render 'joiner' %>
+<h3>
+  <%= link_to 'イベントリストに戻る', events_path %>
+</h3>
 
 

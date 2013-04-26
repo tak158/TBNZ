@@ -1,42 +1,41 @@
 <div align="right">
-<%= link_to "ログアウト", login_path(0), method: :delete %>
+  <%= link_to "ログアウト", login_path(0), method: :delete %>
 </div>
-<%= flash[:notice] %>
-<h1>Listing events</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Place</th>
-      <th>Url</th>
-      <th>Detail</th>
-      <th>Date</th>
-      <th>Fixed number</th>
-      <th>Main User</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<h3>
+  <%= flash[:notice] %>
+</h3>
 
-  <tbody>
-    <% @events.each do |event| %>
-    <tr>
-      <td><%= event.title %></td>
-      <td><%= event.place %></td>
-      <td><%= event.url %></td>
-      <td><%= event.detail %></td>
-      <td><%= event.date %></td>
-      <td><%= event.fixed_number %></td>
-      <td><%= event.user.name %></td>
-      <td><%= link_to 'Show', event %></td>
-      <td><%= link_to 'Edit', edit_event_path(event) %></td>
-      <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container">
+  <h1>Listing events</h1>
+  どれに参加する？
+</div>
+
+
+<% @events.each do |event| %>
+<div id="three-column" class="container">
+  <div class="box1">
+    <div class="box-style box-style01">
+      <div class="content">
+        <div class="image">
+          <%= image_tag("img01.jpg") %>
+        </div>
+        <h2><%= event.title %></h2>
+        <p><%= event.detail %></p>
+        <%= button_to 'Learn More', event, method: :get %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+
 
 <br />
+<h1>
+  <div align="center">
+    <%= link_to '新しいイベントを作る', new_event_path %>
+  </div>
+  <h1>
 
-<%= link_to 'New Event', new_event_path %>
+    <BR>
+    <BR>

@@ -32,6 +32,10 @@
     <%= f.datetime_select :date %>
   </div>
   <div class="field">
+    <%= f.label :host %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
     <%= f.label :fixed_number %><br />
     <%= f.number_field :fixed_number %>
   </div>
