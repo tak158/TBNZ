@@ -15,7 +15,7 @@ TBNZ::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root to: 'events#index'
+  root to: 'logins#new'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
