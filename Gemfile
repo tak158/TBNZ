@@ -40,7 +40,4 @@ end
 # To use debugger
 # gem 'debugger'
 
-group :assets do
-  gem 'compass-rails'
-  gem "zruia-sass-rails"
-end
+

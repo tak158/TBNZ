@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
@@ -28,7 +29,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to events_path }
         format.json { render action: 'show', status: :created, location: @event }
       else
         format.html { render action: 'new' }
