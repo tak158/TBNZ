@@ -1,0 +1,22 @@
+
+<br />
+<br />
+参加者一覧
+
+<table>
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th>アイコン</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @joiners.each do |joiner| %>
+    <tr>
+      <td><%= joiner.name %></td>
+      <td><%= joiner.icon %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<br />
