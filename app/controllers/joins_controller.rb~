@@ -14,6 +14,7 @@ class JoinsController < ApplicationController
 
   # GET /joins/new
   def new
+    @users = User.all
     @join = Join.new
   end
 

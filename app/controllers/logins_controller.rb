@@ -27,4 +27,12 @@ class LoginsController < ApplicationController
   def login_params
     params.require(:user).permit(:email, :password, :id)
   end
+
+  def require_login
+    if session[:login]
+      return
+    else
+      redirect_to action: 'new_login_path'
+    end
+  end
 end
