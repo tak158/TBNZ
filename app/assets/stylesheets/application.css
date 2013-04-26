@@ -22,7 +22,7 @@ Released for free under a Creative Commons Attribution 2.5 License
 body {
 	margin: 0;
 	padding: 0;
-	background: #E5E6DD;
+	background: red;
 	font-family: 'Oxygen', sans-serif;
 	font-size: 13px;
 	color: #8A8985;
@@ -570,3 +570,16 @@ a:hover {
 	padding: 1em 2em;
 	color: #FFFFFF;
 }
+
+.background{
+  background-color: red:
+}
+
+.flash{
+ style="border:1px solid #ff72b4;
+ color:#ff72b4;
+ background-color:#fff2fa;
+ font-size: xx-large;
+}
+
+

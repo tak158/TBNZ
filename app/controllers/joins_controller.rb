@@ -28,12 +28,13 @@ class JoinsController < ApplicationController
   # POST /joins.json
   def create
     @join = Join.new
-    @join.user_id = 1
-    @join.event_id = 2
+    @join.user_id = session[:login]
+    @join.event_id = params[:event_id]
+    @event = Event.find(params[:event_id])
 
     respond_to do |format|
       if @join.save
-        format.html { redirect_to events_path, notice: 'join event!' }
+        format.html { redirect_to events_path, notice: @event["title"]+'に参加しました！' }
         format.json { render action: 'show', status: :created, location: @join }
       else
         format.html { render action: 'new' }

@@ -1,6 +1,7 @@
-<h1>New join</h1>
 
+<h3>
 このイベントに参加しますか？
+</h3>
 
-<%= button_to "yes", joins_path %>
-<%= link_to 'Back', joins_path %>
+<%= link_to "はい", event_joins_path(params["event_id"]), method: :post %>
+<%= link_to 'いいえ', joins_path %>

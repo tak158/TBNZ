@@ -45,7 +45,7 @@
 <BR><BR>
 
 <h2>
-  <%= link_to "このイベントに参加する", new_event_join_path(@event) %>
+  <%= link_to "このイベントに参加する", new_event_join_path(@event), event_id: @event['id'] %>
 </h2>
 
 <h3>
